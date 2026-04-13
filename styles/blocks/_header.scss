@@ -1,0 +1,125 @@
+.header {
+    padding-top: 20px;
+    margin-bottom: 88px;
+    background-color: var(--color-light);
+    z-index: 999;
+
+    @include tablet {
+        padding-top: 10px;
+    }
+
+    @include mobile {
+        padding-top: 0;
+        position: sticky;
+        top: 0;
+    }
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        column-gap: 15px;
+
+        @include tablet {
+            padding-inline: 10px;
+        }
+
+        @include mobile {
+            padding-inline: 15px;
+            height: 60px;
+            box-shadow: var(--shadow-red);
+            border-bottom: 1px solid var(--color-gray-alt);
+        }
+    }
+
+    &__logo {
+        flex-shrink: 0;
+
+        @include hover {
+            transform: scale(1.04);
+        }
+
+        @include tablet {
+            max-width: 120px;
+        }
+
+        @include mobile {
+            max-width: 148px;
+        }
+    }
+
+    &__menu {
+        &-list {
+            display: flex;
+            column-gap: 40px;
+
+            @include tablet {
+                font-size: 14px;
+                column-gap: 30px;
+            }
+        }
+
+        &-item {
+            display: inline-flex;
+            height: 40px;
+            align-items: center;
+        }
+
+        &-link {
+            position: relative;
+
+            @include hover {
+                color: var(--color-red);
+                transform: translateY(-2px);
+                
+                &::after {
+                    width: 130%;
+                }
+            }
+
+            &::after {
+                position: absolute;
+                content: '';
+                top: 100%;
+                left: 50%;
+                translate: -50%;
+                background-color: var(--color-dark);
+                width: 0%;
+                height: 1.5px;
+                transition-duration: var(--transition-duration);
+            }
+        }
+    }
+
+    &__actions {
+        display: flex;
+        align-items: center;
+        column-gap: 30px;
+
+        @include tablet {
+            column-gap: 20px;
+        }
+
+        &-link {
+            color: var(--color-dark);
+            font-weight: 500;
+
+            @include hover {
+                color: var(--color-red);
+                transform: translateY(-2px);
+            }
+
+            @include tablet {
+                font-size: 14px;
+            }
+        }
+    }
+
+    &__button {
+        width: 150px;
+
+        @include tablet {
+            width: 120px;
+        }
+    }
+}

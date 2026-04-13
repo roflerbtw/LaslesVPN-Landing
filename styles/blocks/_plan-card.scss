@@ -1,0 +1,82 @@
+.plan-card {
+    display: flex;
+    flex-direction: column;
+    padding: 80px 76px 50px;
+    justify-content: space-between;
+    row-gap: 50px;
+    border: var(--border-alt);
+    border-radius: var(--border-radius);
+    transition-duration: var(--transition-duration);
+
+    @include desktop {
+        padding: 60px 60px 50px;
+    }
+
+    @include tablet {
+        padding: 30px 40px;
+        row-gap: 30px;
+    }
+
+    @include mobile {
+        width: 100%;
+        padding-block: 30px;
+        row-gap: 15px;
+    }
+
+    @include hover {
+        transform: scale(1.02);
+        transform: translateY(-10px);
+        border: var(--border);
+        box-shadow: var(--shadow-red);
+    }
+
+    &__image {
+
+        @include tablet {
+            max-width: 120px;
+        }
+    }
+    
+    &__body {
+        display: flex;
+        flex-direction: column;
+        row-gap: 30px;
+        align-items: center;
+    }
+
+    &__title {
+        font-size: 18px;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        column-gap: 20px;
+        font-size: 14px;
+
+        svg {
+            color: var(--color-green);
+        }
+    }
+
+    &__buy {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 20px;
+    }
+
+    &__info {
+        font-size: 25px;
+    }
+
+    &__price {
+        color: var(--color-dark);
+    }
+}

@@ -1,0 +1,42 @@
+.footer {
+    padding-top: 180px;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    font-weight: 400;
+    background-color: var(--color-gray-footer);
+
+    @include mobile {
+        flex-direction: column-reverse;
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        max-width: 400px;
+        row-gap: 30px;
+
+        @include tablet {
+            row-gap: 15px;
+        }
+        
+        @include mobile {
+            align-items: center;
+            text-align: center;
+        }
+
+    }
+
+    &__list {
+        display: flex;
+        column-gap: 80px;
+
+        @include tablet {
+            column-gap: 40px;
+        }
+
+        @include mobile {
+            margin-bottom: 30px;
+        }
+    }
+}

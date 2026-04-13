@@ -1,0 +1,36 @@
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__list {
+        display: flex;
+        column-gap: 15px;
+    }
+
+    &__button {
+        @include square(15px);
+        @include reset-button;
+
+        background-color: var(--color-gray-alt);
+        border-radius: 50%;
+
+        @include hover {
+            background-color: var(--color-red);
+        }
+
+        &.is-current {
+            width: 45px;
+            height: 15px;
+            border-radius: 10px;
+            background-color: var(--color-red);
+        }
+    }
+    
+
+    &__actions {
+        display: flex;
+        align-items: center;
+        column-gap: 20px;
+    }
+}

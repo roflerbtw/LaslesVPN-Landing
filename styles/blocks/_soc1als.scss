@@ -1,0 +1,24 @@
+.soc1als {
+    &__list {
+        display: flex;
+        align-items: center;
+        column-gap: 20px;
+    }
+
+    &__link {
+        @include flex-center;
+        @include square(33px);
+
+        border-radius: 50%;
+        background-color: var(--color-light);
+        box-shadow: 1px 2px 5px -2px var(--color-bg-dark);
+        color: var(--color-red);
+
+        @include hover {
+            transform: scale(1.23);
+            box-shadow: 1px 2px 5px 0px var(--color-bg-dark);
+            background-color: var(--color-red);
+            color: var(--color-light);
+        }
+    }
+}

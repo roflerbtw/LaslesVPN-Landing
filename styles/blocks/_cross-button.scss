@@ -1,0 +1,37 @@
+.cross-button {
+        @include reset-button;
+        @include square(40px);
+
+        position: relative;
+        border-radius: var(--border-radius);
+
+        @include hover {
+            background-color: var(--color-red);
+
+            &::after,
+            &::before {
+                background-color: var(--color-light);
+            }
+        }
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            width: 80%;
+            top: 50%;
+            left: 4px;
+            background-color: var(--color-red);
+            height: 2px;
+            border-radius: 5px;
+        }
+
+        &::before {
+            rotate: -45deg;
+        }
+
+        
+        &::after {
+            rotate: 45deg;
+        }
+}

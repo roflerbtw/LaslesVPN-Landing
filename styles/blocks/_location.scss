@@ -1,0 +1,8 @@
+.location {
+    padding-top: 50px;
+    margin-bottom: 100px;
+
+    @include mobile {
+        margin-bottom: 50px;
+    }
+}

@@ -1,0 +1,42 @@
+body {
+    font-family: var(--font-family-base);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.8;
+    background-color: var(--color-light);
+    color: var(--color-gray);
+}
+
+h1 {
+    @include fluid-text(25, 50);
+    font-weight: 500;
+    line-height: 1.4;
+    color: var(--color-dark)
+}
+
+h2, h3, h4, h5 ,h6 {
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 1.4;
+    color: var(--color-dark)
+}
+
+a {
+    color: inherit;
+
+    &[class] {
+        text-decoration: none;
+    }
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+a,
+input,
+button,
+textarea,
+svg * {
+    transition-duration: var(--transition-duration);
+}

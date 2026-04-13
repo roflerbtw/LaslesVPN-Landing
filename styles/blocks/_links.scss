@@ -1,0 +1,30 @@
+.links {
+    &__title {
+        font-size: 18px;
+        
+        &:not(:last-child) {
+            margin-bottom: 20px;
+
+            @include tablet {
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+
+        @include tablet {
+            row-gap: 5px;
+        }
+    }
+
+    &__link {
+        @include hover {
+            color: var(--color-red);
+            transform: scale(1.1);
+        }
+    }
+}

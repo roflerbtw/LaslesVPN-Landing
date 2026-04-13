@@ -1,0 +1,41 @@
+.partners {
+    margin-bottom: 80px;
+
+    @include mobile {
+        margin-bottom: 40px;
+    }
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 60px;
+        filter: grayscale(1);
+        opacity: 0.3;
+
+        @include tablet {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include mobile {
+            gap: 10px;
+            row-gap: 0;
+        }
+    }
+
+    &__item {
+        @include tablet {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &:last-child {
+                grid-column: 1 / -1;
+            }
+        }
+    }
+
+    &__image {
+        @include mobile {
+            max-width: 100px;
+        }
+    }
+}

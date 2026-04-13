@@ -1,0 +1,40 @@
+.button {
+    @include reset-button;
+
+    position: relative;
+    height: var(--button-height);
+    border: var(--border);
+    border-radius: var(--border-radius-large);
+    width: 177px;
+    color: var(--color-red);
+    font-weight: 500;
+
+    @include hover {
+        background-color: var(--color-red);
+        color: var(--color-light);
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-red);
+    }
+
+    &--big {
+        width: 250px;
+        font-weight: 700;
+        height: var(--button-height-alt);
+        border-radius: var(--border-radius);
+        background-color: var(--color-red);
+        color: var(--color-light);
+
+        @include hover {
+            background-color: transparent;
+            color: var(--color-red);
+        }
+
+        @include tablet {
+            max-width: 180px;
+        }
+
+        @include mobile {
+            max-width: 300px;
+        }
+    }
+}
